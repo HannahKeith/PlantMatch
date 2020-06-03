@@ -1,0 +1,30 @@
+{
+  "name": "plant_match_repo",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.0.0"
+  },
+  "description": "Plant Match is an app meant to offer helpful affirmations based on emotional need. The app also provides plants that support the associated chakra both for the home and the garden.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HannahKeith/PlantMatch.git"
+  },
+  "author": "Hannah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HannahKeith/PlantMatch/issues"
+  },
+  "homepage": "https://github.com/HannahKeith/PlantMatch#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.17"
+  }
+}
