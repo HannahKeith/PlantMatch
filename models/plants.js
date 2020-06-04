@@ -7,7 +7,7 @@ const plantSchema = new mongoose.Schema({
           chakra: {type: String, required: true},
           tradition: {type: String, required: true}}],
 
-  gardenPlants: {
+  gardenPlants:
         [  {name: {type: String, required: true},
         chakra: {type: String, required: true},
         tradition: {type: String, required: true}}]
