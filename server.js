@@ -35,8 +35,23 @@ app.get('/', (req, res) => {
 })
 
 app.get('/Love', (req, res) => {
-
   res.render('showlove.ejs')
+})
+
+app.get('/protection', (req, res) => {
+  res.render('showprotection.ejs')
+})
+
+app.get('/sleep', (req, res) => {
+  res.render('showsleep.ejs')
+})
+
+app.get('/health', (req, res) => {
+  res.render('showhealth.ejs')
+})
+
+app.get('/happiness', (req, res) => {
+  res.render('showhappiness.ejs')
 })
 
   // Posts.get(Posts.find({category: "Love"}))
