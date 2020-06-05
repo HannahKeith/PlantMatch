@@ -20,7 +20,8 @@ db.on('connected', () => console.log('mongo connected'));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
 //models
-const Plants = require('./models/plants.js')
+const Posts = require('./models/plants.js')
+const loveSeedPosts = ('./models/seed.js')
 
 // middleware
 // use the public folder
@@ -33,6 +34,22 @@ app.get('/', (req, res) => {
   res.render('index.ejs')
 })
 
+app.get('/Love', (req, res) => {
+  res.render('showlove.ejs')
+})
+
+
+
+
+
+
+// Posts.create(loveSeedPosts, (err, seedPosts) => {
+//       if (err) {
+//         console.log(err);
+//       } else {
+//         console.log(seedPosts);
+//       }
+// })
 
 
 

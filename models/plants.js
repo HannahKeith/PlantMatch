@@ -1,19 +1,14 @@
 const mongoose = require('mongoose')
 
 const plantSchema = new mongoose.Schema({
-  affirmation: {type: String, required: true},
-  housePlants:
-        [  {name: {type: String, required: true},
-          chakra: {type: String, required: true},
-          tradition: {type: String, required: true}}],
+  plantName: {type: String},
+  image: {type: String},
+  tradition: {type: String},
+  category: {type: String},
 
-  gardenPlants:
-        [  {name: {type: String, required: true},
-        chakra: {type: String, required: true},
-        tradition: {type: String, required: true}}]
 });
 
 
-const Affirmation = mongoose.model('affirmation', plantSchema)
+const Post = mongoose.model('post', plantSchema)
 
-module.exports = Affirmation
+module.exports = Post
