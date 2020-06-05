@@ -4,6 +4,48 @@
   <body>
 <h1>Show Love Page</h1>
 
+<div class="container">
+
+  <% for(let i = 0; i < lovePosts.length; i++){ %>
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col mb-4">
+
+            <div class="card">
+              <img src= "<%=lovePosts[i].image%>" alt="plant image" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title"><%=lovePosts[i].plantName%></h5>
+                  <h5 class="card-title"><%=lovePosts[i].nickname%></h5>
+                  <p class="card-text"><%=lovePosts[i].tradition%></p>
+                </div>
+            </div>
+      </div>
+</div>
+
+
+<% } %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ends container -->
+
+</div>
 
 
 

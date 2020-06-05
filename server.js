@@ -35,7 +35,13 @@ app.get('/', (req, res) => {
 })
 
 app.get('/Love', (req, res) => {
-  res.render('showlove.ejs')
+  Posts.find({category: "Love"}, (error, lovePosts) => {
+    res.render('showlove.ejs',
+    {
+      lovePosts: lovePosts
+    }
+  );
+});
 })
 
 app.get('/protection', (req, res) => {
@@ -51,6 +57,7 @@ app.get('/health', (req, res) => {
 })
 
 app.get('/happiness', (req, res) => {
+  Posts.find({})
   res.render('showhappiness.ejs')
 })
 
