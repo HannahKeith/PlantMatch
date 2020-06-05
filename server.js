@@ -30,7 +30,7 @@ app.use(methodOverride('_method'))
 
 // routes
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.render('index.ejs')
 })
 
 
