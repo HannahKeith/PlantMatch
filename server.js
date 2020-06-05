@@ -21,7 +21,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 //models
 const Posts = require('./models/plants.js')
-const loveSeedPosts = ('./models/seed.js')
+const loveSeedPosts = require ('./models/seed.js')
 
 // middleware
 // use the public folder
@@ -35,8 +35,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/Love', (req, res) => {
+
   res.render('showlove.ejs')
 })
+
+  // Posts.get(Posts.find({category: "Love"}))
 
 
 

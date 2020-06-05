@@ -25,6 +25,6 @@ const loveSeedPosts = [
 }
 
 
-
-
 ]
+
+module.exports = loveSeedPosts
