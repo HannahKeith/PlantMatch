@@ -22,6 +22,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 //models
 const Posts = require('./models/plants.js')
 const loveSeedPosts = require ('./models/seed.js')
+const happySeedPosts = require ('./models/seed.js')
 
 // middleware
 // use the public folder
@@ -57,22 +58,27 @@ app.get('/health', (req, res) => {
 })
 
 app.get('/happiness', (req, res) => {
-  Posts.find({})
-  res.render('showhappiness.ejs')
+  Posts.find({category: "Happiness"}, (error, happyPosts) => {
+    res.render('showhappiness.ejs',
+    {
+      happyPosts: happyPosts
+    }
+  );
+});
 })
 
-  // Posts.get(Posts.find({category: "Love"}))
 
 
 
 
 
 
-// Posts.create(loveSeedPosts, (err, seedPosts) => {
+
+// Posts.create(happySeedPosts, (err, happyPosts) => {
 //       if (err) {
 //         console.log(err);
 //       } else {
-//         console.log(seedPosts);
+//         console.log(happyPosts);
 //       }
 // })
 

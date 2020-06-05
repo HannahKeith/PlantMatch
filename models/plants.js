@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 
 const plantSchema = new mongoose.Schema({
   plantName: {type: String},
+  nickname: {type: String},
   image: {type: String},
   tradition: {type: String},
   category: {type: String},
