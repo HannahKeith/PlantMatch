@@ -31,10 +31,17 @@ app.use(express.urlencoded({ extended: false}))
 app.use(methodOverride('_method'))
 
 // routes
+//new route
+app.get('/new', (req, res) => {
+   res.render('new.ejs')
+})
+
+//index route
 app.get('/', (req, res) => {
   res.render('index.ejs')
 })
 
+//show love page
 app.get('/Love', (req, res) => {
   Posts.find({category: "Love"}, (error, lovePosts) => {
     res.render('showlove.ejs',
@@ -45,18 +52,22 @@ app.get('/Love', (req, res) => {
 });
 })
 
+//show protection page
 app.get('/protection', (req, res) => {
   res.render('showprotection.ejs')
 })
 
+//show sleep page
 app.get('/sleep', (req, res) => {
   res.render('showsleep.ejs')
 })
 
+//show health page
 app.get('/health', (req, res) => {
   res.render('showhealth.ejs')
 })
 
+//show happiness page
 app.get('/happiness', (req, res) => {
   Posts.find({category: "Happiness"}, (error, happyPosts) => {
     res.render('showhappiness.ejs',
