@@ -10,17 +10,19 @@
     <div class="row row-cols-1 row-cols-md-2">
       <div class="col mb-4">
 
-            <div class="card">
+            <div class="card text-white bg-dark">
               <img src= "<%=lovePosts[i].image%>" alt="plant image" class="card-img-top">
                 <div class="card-body">
                   <h5 class="card-title"><%=lovePosts[i].plantName%></h5>
                   <h5 class="card-title"><%=lovePosts[i].nickname%></h5>
                   <p class="card-text"><%=lovePosts[i].tradition%></p>
                 </div>
+                <a href="/Love/<%=lovePosts[i].id%>/edit">
+          <button type="button" name="button">Edit</button>
+          </a>
             </div>
       </div>
-      <a href="/Love/<%=lovePosts[i].id%>/edit">
-<button type="button" name="button">Edit</button>
+
 </a>
 </div>
 

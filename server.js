@@ -23,6 +23,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 const Posts = require('./models/plants.js')
 const loveSeedPosts = require ('./models/seed.js')
 const happySeedPosts = require ('./models/seed.js')
+const protecSeedPosts = require ('./models/seed.js')
 
 // middleware
 // use the public folder
@@ -57,7 +58,7 @@ app.get('/Love', (req, res) => {
   );
 });
 })
-
+//edit love route
 app.put('/Love/:id', (req, res) => {
   Posts.findByIdAndUpdate( req.params.id, req.body, {new: true}, (error, updatedPost) => {
     res.redirect('/Love');
@@ -66,7 +67,7 @@ app.put('/Love/:id', (req, res) => {
 
 app.get('/Love/:id/edit', (req, res) => {
   Posts.findById(req.params.id, (error, lovePosts) => {
-    res.render('edit.ejs',
+    res.render('editlove.ejs',
     {
       lovePosts: lovePosts
     }
@@ -78,13 +79,33 @@ app.get('/Love/:id/edit', (req, res) => {
 
 //show protection page
 app.get('/protection', (req, res) => {
-  res.render('showprotection.ejs')
+  Posts.find({category: "Protection"}, (error, protecPosts) => {
+    res.render('showprotection.ejs',
+    {
+      protecPosts: protecPosts
+    }
+  );
+});
 })
 
-//show sleep page
-app.get('/sleep', (req, res) => {
-  res.render('showsleep.ejs')
+//edit protection route
+app.put('/protection/:id', (req, res) => {
+  Posts.findByIdAndUpdate( req.params.id, req.body, {new: true}, (error, updatedPost) => {
+    res.redirect('/protection');
+  })
 })
+
+app.get('/protection/:id/edit', (req, res) => {
+  Posts.findById(req.params.id, (error, protPosts) => {
+    res.render('editProtection.ejs',
+    {
+      protPosts: protPosts
+    }
+  );
+  })
+})
+
+
 
 //show health page
 app.get('/health', (req, res) => {
@@ -102,7 +123,22 @@ app.get('/happiness', (req, res) => {
 });
 })
 
+//edit happiness Page
+app.put('/happiness/:id', (req, res) => {
+  Posts.findByIdAndUpdate( req.params.id, req.body, {new: true}, (error, updatedPost) => {
+    res.redirect('/happiness');
+  })
+})
 
+app.get('/happiness/:id/edit', (req, res) => {
+  Posts.findById(req.params.id, (error, happyPosts) => {
+    res.render('edithappiness.ejs',
+    {
+      happyPosts: happyPosts
+    }
+  );
+  })
+})
 
 
 
@@ -114,6 +150,14 @@ app.get('/happiness', (req, res) => {
 //         console.log(err);
 //       } else {
 //         console.log(happyPosts);
+//       }
+// })
+
+// Posts.create(protecSeedPosts, (err, protecPosts) => {
+//       if (err) {
+//         console.log(err);
+//       } else {
+//         console.log(protecPosts);
 //       }
 // })
 

@@ -29,33 +29,64 @@
 //
 // module.exports = loveSeedPosts
 
-const happySeedPosts = [
+// const happySeedPosts = [
+//
+// {
+//   plantName: "agropyron repens",
+//   nickname: "Witch Grass",
+//   image: "https://i.postimg.cc/JzR800fH/Screen-Shot-2020-06-05-at-5-29-03-PM.png",
+//   tradition: "When the root is worn it dispels depression",
+//   category: "Happiness"
+// },
+//
+// {
+//   plantName: "Lavendule officinale",
+//   nickname: "Lavender",
+//   image: "https://i.postimg.cc/zGTLZynL/Screen-Shot-2020-06-05-at-5-37-51-PM.png",
+//   tradition: "Lavender is so powerful that when a depressed person gazes upon the plant, all sorrow will depart and a joyous feeling settles upon the observer.",
+//   category: "Happiness"
+// },
+//
+// {
+//   plantName: "convallaria majalis",
+//   nickname: "Lily of the Valley",
+//   image: "https://i.postimg.cc/C1bYd8xD/Screen-Shot-2020-06-05-at-5-46-23-PM.png",
+//   tradition: "When placed in a room, these flowers cheer the heart and lift the spirits of those present.",
+//   category: "Happiness"
+// }
+//
+//
+// ]
+//
+// module.exports = happySeedPosts
+
+const protecSeedPosts = [
 
 {
-  plantName: "agropyron repens",
-  nickname: "Witch Grass",
-  image: "https://i.postimg.cc/JzR800fH/Screen-Shot-2020-06-05-at-5-29-03-PM.png",
-  tradition: "When the root is worn it dispels depression",
-  category: "Happiness"
+  plantName: "Aloe vera, A. spp.",
+  nickname: "Aloe",
+  image: "https://i.postimg.cc/3JL9DSqC/Screen-Shot-2020-06-06-at-4-39-16-PM.png",
+  tradition: "Aloe guards against evil influences and protects the home from accidents.",
+  category: "Protection"
 },
 
 {
-  plantName: "Lavendule officinale",
-  nickname: "Lavender",
-  image: "https://i.postimg.cc/zGTLZynL/Screen-Shot-2020-06-05-at-5-37-51-PM.png",
-  tradition: "Lavender is so powerful that when a depressed person gazes upon the plant, all sorrow will depart and a joyous feeling settles upon the observer.",
-  category: "Happiness"
+  plantName: "Acacia senegal",
+  nickname: "Acacia",
+  image: "https://i.postimg.cc/NffvcnT1/Screen-Shot-2020-06-06-at-4-45-12-PM.png",
+  tradition: "Asprig of the tree wards of evil and is hung above the doors in the home and placed in the turban in eastern countries.",
+  category: "Protection"
 },
 
 {
-  plantName: "convallaria majalis",
-  nickname: "Lily of the Valley",
-  image: "https://i.postimg.cc/C1bYd8xD/Screen-Shot-2020-06-05-at-5-46-23-PM.png",
-  tradition: "When placed in a room, these flowers cheer the heart and lift the spirits of those present.",
-  category: "Happiness"
+  plantName: "Stachys betonica",
+  nickname: "Wood Betony",
+  image: "https://i.postimg.cc/2yzZSYFd/Screen-Shot-2020-06-06-at-4-48-57-PM.png",
+  tradition: "On Midsummer, burn betony on a fire and jump through the smoke to purify the body of ills and evil.",
+  category: "Protection"
 }
 
 
 ]
 
-module.exports = happySeedPosts
+module.exports = protecSeedPosts
