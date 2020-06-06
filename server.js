@@ -41,6 +41,12 @@ app.get('/', (req, res) => {
   res.render('index.ejs')
 })
 
+app.post('/', (req, res) => {
+  Posts.create(req.body, (error, createdPost) => {
+      res.redirect('/');
+  });
+});
+
 //show love page
 app.get('/Love', (req, res) => {
   Posts.find({category: "Love"}, (error, lovePosts) => {
