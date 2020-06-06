@@ -58,6 +58,24 @@ app.get('/Love', (req, res) => {
 });
 })
 
+app.put('/Love/:id', (req, res) => {
+  Posts.findByIdAndUpdate( req.params.id, req.body, {new: true}, (error, updatedPost) => {
+    res.redirect('/Love');
+  })
+})
+
+app.get('/Love/:id/edit', (req, res) => {
+  Posts.findById(req.params.id, (error, lovePosts) => {
+    res.render('edit.ejs',
+    {
+      lovePosts: lovePosts
+    }
+  );
+  })
+})
+
+
+
 //show protection page
 app.get('/protection', (req, res) => {
   res.render('showprotection.ejs')
