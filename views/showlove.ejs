@@ -20,6 +20,11 @@
                 <a href="/Love/<%=lovePosts[i].id%>/edit">
           <button type="button" name="button">Edit</button>
           </a>
+          <!-- IDEA: delete button -->
+            <form action="/Love/<%=lovePosts[i].id %>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE"/>
+            </form>
+            </div>
             </div>
       </div>
 
@@ -29,16 +34,17 @@
 
 <% } %>
 
-
+<!-- IDEA: Return to Index Button -->
 <a href="/">
 <button type="button" name="button">Return Home</button>
 </a>
-
+<!-- IDEA: New button -->
 <div class="button-div">
     <a href="/new">
         <button type="button" name="button">Submit a New Post</button>
       </a>
-  </div>
+
+
 
 
 

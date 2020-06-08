@@ -59,6 +59,12 @@ app.get('/Love', (req, res) => {
   );
 });
 })
+//delete love route
+app.delete('/Love/:id', (req, res) => {
+  Posts.findByIdAndRemove( req.params.id,  (error, deletedPost) => {
+    res.redirect('/Love');
+  })
+})
 //edit love route
 app.put('/Love/:id', (req, res) => {
   Posts.findByIdAndUpdate( req.params.id, req.body, {new: true}, (error, updatedPost) => {
@@ -75,6 +81,7 @@ app.get('/Love/:id/edit', (req, res) => {
   );
   })
 })
+
 
 
 
