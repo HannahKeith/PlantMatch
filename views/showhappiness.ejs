@@ -16,10 +16,15 @@
                       <h5 class="card-title"><%=happyPosts[i].plantName%></h5>
                       <h5 class="card-title"><%=happyPosts[i].nickname%></h5>
                       <p class="card-text"><%=happyPosts[i].tradition%></p>
-                    </div>
+
                     <a href="/happiness/<%=happyPosts[i].id%>/edit">
-                <button type="button" name="button">Edit</button>
-                </a>
+                      <button type="button" name="button">Edit</button>
+                    </a>
+                    <!-- IDEA: delete button -->
+                      <form action="/happy/<%=happyPosts[i].id %>?_method=DELETE" method="POST">
+                      <input type="submit" value="DELETE"/>
+                      </form>
+                    </div>
                 </div>
 
           </div>
@@ -41,11 +46,11 @@
     <div class="button-div">
         <a href="/new">
             <button type="button" name="button">Submit a New Post</button>
-          </a>
+        </a>
 
-    <a href="/">
-<button type="button" name="button">Return Home</button>
-</a>
+        <a href="/">
+          <button type="button" name="button">Return Home</button>
+        </a>
 
   </div>
 

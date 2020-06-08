@@ -16,33 +16,38 @@
                   <h5 class="card-title"><%=lovePosts[i].plantName%></h5>
                   <h5 class="card-title"><%=lovePosts[i].nickname%></h5>
                   <p class="card-text"><%=lovePosts[i].tradition%></p>
-                </div>
+
                 <a href="/Love/<%=lovePosts[i].id%>/edit">
-          <button type="button" name="button">Edit</button>
-          </a>
+                  <button type="button" name="button">Edit</button>
+                </a>
           <!-- IDEA: delete button -->
             <form action="/Love/<%=lovePosts[i].id %>?_method=DELETE" method="POST">
             <input type="submit" value="DELETE"/>
             </form>
             </div>
-            </div>
-      </div>
+          </div>
+        </div>
+    </div>
 
-</a>
-</div>
+
+
 
 
 <% } %>
 
-<!-- IDEA: Return to Index Button -->
-<a href="/">
-<button type="button" name="button">Return Home</button>
-</a>
-<!-- IDEA: New button -->
+</div>
+
 <div class="button-div">
+
+    <a href="/">
+      <button type="button" name="button">Return Home</button>
+    </a>
+
     <a href="/new">
         <button type="button" name="button">Submit a New Post</button>
-      </a>
+    </a>
+
+</div>
 
 
 

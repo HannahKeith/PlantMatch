@@ -113,7 +113,12 @@ app.get('/protection/:id/edit', (req, res) => {
   })
 })
 
-
+//delete protection route
+app.delete('/protection/:id', (req, res) => {
+  Posts.findByIdAndRemove( req.params.id,  (error, deletedPost) => {
+    res.redirect('/protection');
+  })
+})
 
 //show health page
 app.get('/health', (req, res) => {
@@ -140,6 +145,13 @@ app.get('/health/:id/edit', (req, res) => {
       healthPosts: healthPosts
     }
   );
+  })
+})
+
+//delete Health route
+app.delete('/health/:id', (req, res) => {
+  Posts.findByIdAndRemove( req.params.id,  (error, deletedPost) => {
+    res.redirect('/health');
   })
 })
 
@@ -173,7 +185,12 @@ app.get('/happiness/:id/edit', (req, res) => {
   })
 })
 
-
+//delete happiness route
+app.delete('/happiness/:id', (req, res) => {
+  Posts.findByIdAndRemove( req.params.id,  (error, deletedPost) => {
+    res.redirect('/happiness');
+  })
+})
 
 
 
