@@ -24,6 +24,7 @@ const Posts = require('./models/plants.js')
 const loveSeedPosts = require ('./models/seed.js')
 const happySeedPosts = require ('./models/seed.js')
 const protecSeedPosts = require ('./models/seed.js')
+const healthSeedPosts = require ('./models/seed.js')
 
 // middleware
 // use the public folder
@@ -109,8 +110,33 @@ app.get('/protection/:id/edit', (req, res) => {
 
 //show health page
 app.get('/health', (req, res) => {
-  res.render('showhealth.ejs')
+  Posts.find({category: "Health"}, (error, healthPosts) => {
+    res.render('showhealth.ejs',
+      {
+        healthPosts: healthPosts
+      }
+  )
+  })
 })
+
+//edit health Posts
+app.put('/health/:id', (req, res) => {
+  Posts.findByIdAndUpdate( req.params.id, req.body, {new: true}, (error, updatedPost) => {
+    res.redirect('/health');
+  })
+})
+
+app.get('/health/:id/edit', (req, res) => {
+  Posts.findById(req.params.id, (error, healthPosts) => {
+    res.render('edithealth.ejs',
+    {
+      healthPosts: healthPosts
+    }
+  );
+  })
+})
+
+
 
 //show happiness page
 app.get('/happiness', (req, res) => {
@@ -160,7 +186,13 @@ app.get('/happiness/:id/edit', (req, res) => {
 //         console.log(protecPosts);
 //       }
 // })
-
+// Posts.create(healthSeedPosts, (err, healthPosts) => {
+//       if (err) {
+//         console.log(err);
+//       } else {
+//         console.log(healthPosts);
+//       }
+// })
 
 
 

@@ -59,34 +59,65 @@
 // ]
 //
 // module.exports = happySeedPosts
+//
+// const protecSeedPosts = [
+//
+// {
+//   plantName: "Aloe vera, A. spp.",
+//   nickname: "Aloe",
+//   image: "https://i.postimg.cc/3JL9DSqC/Screen-Shot-2020-06-06-at-4-39-16-PM.png",
+//   tradition: "Aloe guards against evil influences and protects the home from accidents.",
+//   category: "Protection"
+// },
+//
+// {
+//   plantName: "Acacia senegal",
+//   nickname: "Acacia",
+//   image: "https://i.postimg.cc/NffvcnT1/Screen-Shot-2020-06-06-at-4-45-12-PM.png",
+//   tradition: "Asprig of the tree wards of evil and is hung above the doors in the home and placed in the turban in eastern countries.",
+//   category: "Protection"
+// },
+//
+// {
+//   plantName: "Stachys betonica",
+//   nickname: "Wood Betony",
+//   image: "https://i.postimg.cc/2yzZSYFd/Screen-Shot-2020-06-06-at-4-48-57-PM.png",
+//   tradition: "On Midsummer, burn betony on a fire and jump through the smoke to purify the body of ills and evil.",
+//   category: "Protection"
+// }
+//
+//
+// ]
+//
+// module.exports = protecSeedPosts
 
-const protecSeedPosts = [
+const healthSeedPosts = [
 
 {
-  plantName: "Aloe vera, A. spp.",
-  nickname: "Aloe",
-  image: "https://i.postimg.cc/3JL9DSqC/Screen-Shot-2020-06-06-at-4-39-16-PM.png",
-  tradition: "Aloe guards against evil influences and protects the home from accidents.",
-  category: "Protection"
+  plantName: "Oxalis acetosella",
+  nickname: "Wood Sorrel",
+  image: "https://i.postimg.cc/NG48chGK/Screen-Shot-2020-06-08-at-8-38-38-AM.png",
+  tradition: "Fresh Wood Sorrel placed in sick rooms aids in recuperation from illness. Dried leaves are worn to protect the heart from disease.",
+  category: "Health"
 },
 
 {
-  plantName: "Acacia senegal",
-  nickname: "Acacia",
-  image: "https://i.postimg.cc/NffvcnT1/Screen-Shot-2020-06-06-at-4-45-12-PM.png",
-  tradition: "Asprig of the tree wards of evil and is hung above the doors in the home and placed in the turban in eastern countries.",
-  category: "Protection"
+  plantName: "Fraxinus excelsior",
+  nickname: "Ash",
+  image: "https://i.postimg.cc/dQ2kyghJ/Screen-Shot-2020-06-08-at-8-46-03-AM.png",
+  tradition: "If a person has been bitten by a snake, make a circlet of ash twigs and tie it around the victims neck.",
+  category: "Health"
 },
 
 {
-  plantName: "Stachys betonica",
-  nickname: "Wood Betony",
-  image: "https://i.postimg.cc/2yzZSYFd/Screen-Shot-2020-06-06-at-4-48-57-PM.png",
-  tradition: "On Midsummer, burn betony on a fire and jump through the smoke to purify the body of ills and evil.",
-  category: "Protection"
+  plantName: "Viscum album",
+  nickname: "European Mistletoe, All Heal",
+  image: "https://i.postimg.cc/9MWMtQRV/Screen-Shot-2020-06-08-at-8-54-08-AM.png",
+  tradition: "A ring carved of mistletoe wood will ward off sicknesses when worn, and when carried, will cure fresh wounds quickly.",
+  category: "Health"
 }
 
 
 ]
 
-module.exports = protecSeedPosts
+module.exports = healthSeedPosts
