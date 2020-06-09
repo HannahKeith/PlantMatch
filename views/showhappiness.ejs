@@ -2,39 +2,40 @@
 <html lang="en" dir="ltr">
 <%-include('./partials/head.ejs')%>
   <body>
-    <h1>Show Happiness Page</h1>
+    <h1 class="mb-5 mt-5 text-center">Show Happiness Page</h1>
 
-    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 ml-md-5">
 
       <% for(let i = 0; i < happyPosts.length; i++){ %>
-        <div class="row row-cols-1 row-cols-md-2">
+
           <div class="col mb-4">
 
-                <div class="card text-white bg-dark">
-                  <img src= "<%=happyPosts[i].image%>" alt="plant image" class="card-img-top">
+                <div class="card text-white bg-dark text-center h-100" style="width: 40rem;">
+                  <img src= "<%=happyPosts[i].image%>" alt="plant image" class="card-img-top h-50">
                     <div class="card-body">
                       <h5 class="card-title"><%=happyPosts[i].plantName%></h5>
                       <h5 class="card-title"><%=happyPosts[i].nickname%></h5>
                       <p class="card-text"><%=happyPosts[i].tradition%></p>
 
                     <a href="/happiness/<%=happyPosts[i].id%>/edit">
-                      <button type="button" name="button">Edit</button>
+                      <button class="btn btn-primary mb-4 mt-5 bg-info" type="button" name="button">Edit</button>
                     </a>
                     <!-- IDEA: delete button -->
                       <form action="/happy/<%=happyPosts[i].id %>?_method=DELETE" method="POST">
-                      <input type="submit" value="DELETE"/>
+                      <input class="btn btn-primary bg-info" type="submit" value="DELETE"/>
                       </form>
                     </div>
                 </div>
 
           </div>
 
-    </div>
+
 
 
     <% } %>
 
 
+  </div>
 
 
 
@@ -42,14 +43,13 @@
 
 
 
-
-    <div class="button-div">
+    <div class="button-div ml-md-5 mb-5">
         <a href="/new">
-            <button type="button" name="button">Submit a New Post</button>
+            <button class="btn btn-primary bg-info ml-md-3" type="button" name="button">Submit a New Post</button>
         </a>
 
         <a href="/">
-          <button type="button" name="button">Return Home</button>
+          <button class="btn btn-primary bg-info ml-md-3" type="button" name="button">Return Home</button>
         </a>
 
   </div>
@@ -58,9 +58,7 @@
 
 
 
-      <!-- ends container -->
 
-    </div>
 
 
 
