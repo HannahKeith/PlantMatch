@@ -3,43 +3,71 @@
  <%-include('./partials/head.ejs')%>
 
 
+ <div class="jumbotron text-white bg-dark ml-3 mr-3">
+   <h1 class="display-4">Community-Sourced Ethnobotanical Repository</h1>
+   <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+   <hr class="my-4">
+   <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+   <p class="lead " >
+     <form class="" style="max-width: 350px;"  >
+     <div class="form-group " >
+     <label for="categories"></label>
+     <select class="form-control form-control-lg " id="categories" onchange="window.location=this.value" form="categories">
+       <option value="/">Choose a Category</option>
+       <option value="/love">Love</option>
+       <option value="/protection">Protection</option>
+       <option value="/health">Health</option>
+       <option value="/happiness">Happiness</option>
+     </select>
+     </div>
+     </form>
+
+
+   </p>
+ </div>
+
+<!-- IDEA: cards below -->
+<div class="card-deck ml-5 mr-5 mb-5">
 
 
 
-<nav class="nav text-white bg-dark ml-3 mr-3 mt-3 mb-3 align-items-center">
 
 
-    <form class=""  >
-    <div class="form-group " >
-    <label for="categories"></label>
-    <select class="form-control form-control-lg  ml-3" id="categories" onchange="window.location=this.value" form="categories">
-      <option value="/">Choose a Category</option>
-      <option value="/love">Love</option>
-      <option value="/protection">Protection</option>
-      <option value="/health">Health</option>
-      <option value="/happiness">Happiness</option>
-    </select>
-    </div>
-    </form>
+<!-- IDEA: Blog Card 1 -->
 
-    <h1 class="text-right ml-5">Community-Sourced Ethnobotanical Repository</h1>
-
-</nav>
-
-<div class="card text-white bg-dark  ml-5" style="max-width: 540px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="https://i.postimg.cc/ZRgyMJ4j/Screen-Shot-2020-06-05-at-10-50-55-AM.png" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">User Created Cards</h5>
-        <p class="card-text">This repository provides a place for users all over the world to imortalize often-oral and generational traditions in healing plants and WortCunning.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
+<div class="card text-white bg-dark   " style="width: 18rem;">
+  <img src="https://i.postimg.cc/cJbHpvcm/Screen-Shot-2020-06-09-at-9-58-05-AM.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">An ethnobotanical study of medicinal plants used by local people in the lowlands of Konta Special Woreda</h5>
+    <p class="card-text">Background
+Research was carried out in Konta Special Woreda (District); it is a remote area with lack of infrastructure like road to make any research activities in the area. Therefore, this research was conducted to investigate medicinal plants of the Konta people and to document the local knowledge before environmental and cultural changes deplete the resources..</p>
+    <a href="https://ethnobiomed.biomedcentral.com/articles/10.1186/1746-4269-5-26" class="btn btn-primary">Go to Article</a>
   </div>
 </div>
+
+<!-- IDEA: Blog Card 2 -->
+
+<div class="card text-white bg-dark  " style="width: 18rem;">
+  <img src="https://i.postimg.cc/Sxzmvms0/Screen-Shot-2020-06-09-at-9-55-32-AM.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">An ethnobotanical study of medicinal plants in Appalachia</h5>
+    <p class="card-text">A large amount of accepted plant medicines from the United States have continued to be harvested in Appalachia up to modern times (Cozzo, 1999; Krochmal & Walters, 1971). Use of herbal products in United States persists and even continues to grow. One reason for such a phenomenon, may be that natural medicines can work more safely and effectively than synthetic pharmaceuticals, while being more economical as well (Duke, 2009). However, not all herbs are totally safe and without side effects. Consumer education on such a point is an important subject as the herbal industry is largely unregulated. Medicinal plant use is not something to be taken lightly. One might assume because plant medicine is “natural” that it may be less dangerous than synthetic substitutes upon which many have come to rely. This is certainly not the case. The classic statement of Toxicology is that the difference between a medicine and a poison is the dosage. One must know many variables when stepping into the realm of plant medicine. These include: what to treat, proper identification of the plant to use, what part to use, when to gather, how to prepare it, method of administration, dosage level, and contraindications.</p>
+    <a href="http://www.botanyeveryday.com/online-classes/plant-talk-11-botany-in-a-day-online-class-temperate-mostly-appalachian-medicinal-plant-study-review" class="btn btn-primary">Go to Article</a>
+  </div>
+</div>
+
+
+
+<!-- ends container -->
+</div>
+
+
+
+
+
+
+
+
 
 
 
